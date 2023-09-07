@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.accordian{
+    width: 200px;
+    margin-bottom: 20px;
+    
+}
+
+.menu{
+    background: palevioletred;
+    cursor: pointer;
+    position: relative;
+}
+.items p{
+    background-color: rgb(134, 134, 254);
+    border-bottom: 2px solid black;
+}
+
+.items{
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s linear;
+}
+.icon{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+
+/* -------one ----     */
+
+/* .items{
+    display: none;
+}
+
+.items.open{
+    display: block;
+} */
