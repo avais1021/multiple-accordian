@@ -30,9 +30,10 @@ accordian.forEach((item,index)=>{
         }
         removeOpen(index);
         console.log(mnuItems);
+        console.log(index , ' accordian click menu')
     });
 });
-
+3
     function removeOpen (index1){
         accordian.forEach((item2,index2) => {
             if(index1 != index2){

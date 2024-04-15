@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .accordian{
+        width: 200px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .menu{
+        background: rgb(236, 255, 158);
+        cursor: pointer;
+        position: relative;
+    }
+    .items p{
+        background-color: rgb(134, 134, 254);
+        border-bottom: 2px solid black;
+    }
+    
+    .items{
+        height: 0;
+        overflow: hidden;
+        transition: 1.5s linear;
+    }
+    .cross{
+        position: absolute;
+        right: 10px;
+        top: -2px;
+    }
+
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="accordian">
+
+        <div class="menu">
+            <h3>Numbers</h3>
+            <span class="cross">➕</span>
+        </div>
+        <div class="items">
+            <p>one</p>
+            <p>Two</p>
+            <p>Three</p>
+            <p>Four</p>
+            <p>fifth</p>
+            <p>sixth</p>
+
+            
+        </div>
+    </div>
+
+
+    <script>
+        const crossIcon = document.querySelector('.cross');
+        const items = document.querySelector('.items');
+
+        crossIcon.addEventListener('click' , ()=>{
+            items.classList.toggle('open');
+            if(items.classList.contains('open')){
+                items.style.height = items.scrollHeight + 'px';
+                crossIcon.innerText = '➖';
+            }else{
+                items.style.height = 0;
+                crossIcon.innerText = '➕';
+            }
+        })
+    </script>
+</body>
+</html>
